@@ -26,10 +26,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.hassan3217.alexgolf.rickandmorty.R;
-import com.hassan3217.alexgolf.rickandmorty.ui.Adapters.CharacterAdapter;
-import com.hassan3217.alexgolf.rickandmorty.ui.Models.CharacterModel;
-import com.hassan3217.alexgolf.rickandmorty.utils.fvrt;
+import com.alex.rickandmorty.R;
+import com.alex.rickandmorty.ui.Adapters.CharacterAdapter;
+import com.alex.rickandmorty.ui.Models.CharacterModel;
+import com.alex.rickandmorty.utils.fvrt;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONArray;

@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hassan3217.alexgolf.rickandmorty.CharacterDetail">
+    <item
+        android:id="@+id/filter_by_name"
+        android:title="Name"
+
+         />
+
+    <item
+        android:id="@+id/filter_by_status"
+        android:title="Status"
+
+        />
+
+
+    <item
+        android:id="@+id/filter_by_specie"
+        android:title="Species"
+
+        />
+
+    <item
+        android:id="@+id/filter_by_fvrt"
+        android:title="Open Favourites"
+
+        />
+
+
+</menu>

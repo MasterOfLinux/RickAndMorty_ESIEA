@@ -23,4 +23,34 @@ public class MainActivity extends AppCompatActivity {
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-    }}
+        navigationView = findViewById(R.id.bottom_navigation);
+        getSupportFragmentManager().beginTransaction().replace(R.id.body_container, new CharacterFragment()).commit();
+        navigationView.setSelectedItemId(R.id.nav_char);
+
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment fragment = null;
+                switch (item.getItemId()){
+
+                    case R.id.nav_char:
+                        fragment = new CharacterFragment();
+                        break;
+
+                    case R.id.nav_ep:
+                        fragment = new EpisodeFragment();
+                        break;
+
+                    case R.id.nav_loc:
+                        fragment = new LocationFragment();
+                        break;
+
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
+
+                return true;
+            }
+        });
+
+    }
+}

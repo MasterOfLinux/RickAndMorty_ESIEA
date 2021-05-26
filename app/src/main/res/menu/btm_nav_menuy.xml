@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_char"
+        android:icon="@drawable/character"
+        android:title="Character" />
+
+    <item
+        android:id="@+id/nav_ep"
+        android:icon="@drawable/episode"
+        android:title="Episode" />
+
+    <item
+        android:id="@+id/nav_loc"
+        android:icon="@drawable/location"
+        android:title="Location" />
+
+
+
+</menu>
