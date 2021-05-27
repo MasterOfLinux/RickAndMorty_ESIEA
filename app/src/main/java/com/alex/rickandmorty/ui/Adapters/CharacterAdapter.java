@@ -13,9 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hassan3217.alexgolf.rickandmorty.CharacterDetail;
-import com.hassan3217.alexgolf.rickandmorty.R;
-import com.hassan3217.alexgolf.rickandmorty.ui.Models.CharacterModel;
+//import com.alex.rickandmorty.CharacterDetail; ADD SOON
+import com.alex.rickandmorty.R;
+import com.alex.rickandmorty.ui.Models.CharacterModel;
 import com.sackcentury.shinebuttonlib.ShineButton;
 import com.squareup.picasso.Picasso;
 

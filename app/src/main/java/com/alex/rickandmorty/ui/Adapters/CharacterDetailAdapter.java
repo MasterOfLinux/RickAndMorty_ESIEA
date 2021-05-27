@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hassan3217.alexgolf.rickandmorty.R;
-import com.hassan3217.alexgolf.rickandmorty.ui.Models.CharachterDeatilModel;
+import com.alex.rickandmorty.R;
+import com.alex.rickandmorty.ui.Models.CharachterDeatilModel;
 
 import java.util.List;
 

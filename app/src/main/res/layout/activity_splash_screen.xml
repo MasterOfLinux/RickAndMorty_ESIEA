@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif-monospace"
-        android:text="Rick&Morty"
+        android:text="Rick And Morty"
         android:textColor="@color/txt_c_main_chr_name"
         android:textSize="25sp"
         android:textStyle="bold"
