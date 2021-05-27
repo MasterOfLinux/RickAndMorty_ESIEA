@@ -16,9 +16,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.hassan3217.alexgolf.rickandmorty.R;
-import com.hassan3217.alexgolf.rickandmorty.ui.Adapters.LocationAdapter;
-import com.hassan3217.alexgolf.rickandmorty.ui.Models.LocationModel;
+import com.alex.rickandmorty.R;
+import com.alex.rickandmorty.ui.Adapters.LocationAdapter;
+import com.alex.rickandmorty.ui.Models.LocationModel;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONArray;

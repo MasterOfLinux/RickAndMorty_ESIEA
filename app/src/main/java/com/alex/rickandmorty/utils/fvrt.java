@@ -10,8 +10,8 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.hassan3217.alexgolf.rickandmorty.CharacterDetail;
-import com.hassan3217.alexgolf.rickandmorty.R;
+import com.alex.rickandmorty.CharacterDetail;
+import com.alex.rickandmorty.R;
 
 import java.io.File;
 import java.util.ArrayList;
