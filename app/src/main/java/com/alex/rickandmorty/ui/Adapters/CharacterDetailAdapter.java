@@ -1,18 +1,25 @@
 package com.alex.rickandmorty.ui.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
+import com.alex.rickandmorty.CharacterDetail;
 import com.alex.rickandmorty.R;
 import com.alex.rickandmorty.ui.Models.CharachterDeatilModel;
+import com.alex.rickandmorty.ui.Models.CharacterModel;
+import com.sackcentury.shinebuttonlib.ShineButton;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CharacterDetailAdapter extends  RecyclerView.Adapter<CharacterDetailAdapter.viewHolder> {
 
@@ -26,11 +33,11 @@ public class CharacterDetailAdapter extends  RecyclerView.Adapter<CharacterDetai
 
     @NonNull
     @Override
-    public viewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int pos) {
+    public CharacterDetailAdapter.viewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int pos) {
         View view = LayoutInflater.from(viewGroup.getContext()).
                 inflate(R.layout.chr_d_card, viewGroup, false);
         context = viewGroup.getContext();
-        return new viewHolder(view);
+        return new CharacterDetailAdapter.viewHolder(view);
 
     }
 
@@ -38,7 +45,7 @@ public class CharacterDetailAdapter extends  RecyclerView.Adapter<CharacterDetai
 
 
     @Override
-    public void onBindViewHolder(@NonNull viewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CharacterDetailAdapter.viewHolder holder, int position) {
         CharachterDeatilModel model = modelList.get(position);
 
         holder.tvName.setText(model.getName());

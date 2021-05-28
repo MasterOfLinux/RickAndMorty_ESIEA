@@ -68,7 +68,7 @@ public class CharacterDetail extends AppCompatActivity {
         toolBarLayout.setTitle("Loading.....");
 
         shineButton = (ShineButton) findViewById(R.id.shine_button);
-        shineButton.init(com.alex.rickandmorty.CharacterDetail.this);
+        shineButton.init(CharacterDetail.this);
 
         avi = findViewById(R.id.avi);
         name = findViewById(R.id.char_d_name);
@@ -104,9 +104,9 @@ public class CharacterDetail extends AppCompatActivity {
                     fOut.flush();
                     fOut.close();
                     file.setReadable(true, false);
-                    final Intent intent = new Intent(Intent.ACTION_SEND);
+                    final Intent intent = new Intent(android.content.Intent.ACTION_SEND);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    Uri photoURI = FileProvider.getUriForFile(com.alex.rickandmorty.CharacterDetail.this, BuildConfig.APPLICATION_ID + ".provider", file);
+                    Uri photoURI = FileProvider.getUriForFile(CharacterDetail.this, BuildConfig.APPLICATION_ID + ".provider", file);
                     // intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file.getC));
                     intent.putExtra(Intent.EXTRA_STREAM, photoURI);
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
@@ -173,10 +173,10 @@ public class CharacterDetail extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(com.alex.rickandmorty.CharacterDetail.this, "3 " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(CharacterDetail.this, "3 " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-        RequestQueue requestQueue = Volley.newRequestQueue(com.alex.rickandmorty.CharacterDetail.this);
+        RequestQueue requestQueue = Volley.newRequestQueue(CharacterDetail.this);
         requestQueue.add(stringRequest);
 
         shineButton.setOnCheckStateChangeListener(new ShineButton.OnCheckedChangeListener() {
@@ -235,7 +235,7 @@ public class CharacterDetail extends AppCompatActivity {
                     modelList.add(model);
 
                     //avi.hide();
-                    mAdapter = new CharacterDetailAdapter(modelList, com.alex.rickandmorty.CharacterDetail.this);
+                    mAdapter = new CharacterDetailAdapter(modelList, CharacterDetail.this);
                     mRecyclerView.setAdapter(mAdapter);
                     mAdapter.notifyDataSetChanged();
                     // Toast.makeText(CharacterDetail.this, "L " + nm +" "+ eps , Toast.LENGTH_SHORT).show();
@@ -248,10 +248,10 @@ public class CharacterDetail extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(com.alex.rickandmorty.CharacterDetail.this, "3 " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(CharacterDetail.this, "3 " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-        RequestQueue requestQueue2 = Volley.newRequestQueue(com.alex.rickandmorty.CharacterDetail.this);
+        RequestQueue requestQueue2 = Volley.newRequestQueue(CharacterDetail.this);
         requestQueue2.add(stringRequest2);
 
     }

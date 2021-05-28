@@ -1,14 +1,15 @@
 package com.alex.rickandmorty.ui.FragmentModels;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -17,7 +18,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.alex.rickandmorty.R;
+import com.alex.rickandmorty.ui.Adapters.EpisodeAdapter;
 import com.alex.rickandmorty.ui.Adapters.LocationAdapter;
+import com.alex.rickandmorty.ui.Models.EpisodeModel;
 import com.alex.rickandmorty.ui.Models.LocationModel;
 import com.wang.avi.AVLoadingIndicatorView;
 
@@ -43,7 +46,7 @@ public class LocationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-      //  root = inflater.inflate(R.layout.fragment_location, container, false);
+        root = inflater.inflate(R.layout.fragment_location, container, false);
 
 
 
