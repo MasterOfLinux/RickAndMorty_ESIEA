@@ -17,8 +17,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.alex.rickandmorty.R;
-//import com.alex.rickandmorty.ui.Adapters.EpisodeAdapter; ADD SOON
-//import com.alex.rickandmorty.ui.Models.EpisodeModel; ADD SOON
+import com.alex.rickandmorty.ui.Adapters.EpisodeAdapter;
+import com.alex.rickandmorty.ui.Models.EpisodeModel;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.json.JSONArray;
