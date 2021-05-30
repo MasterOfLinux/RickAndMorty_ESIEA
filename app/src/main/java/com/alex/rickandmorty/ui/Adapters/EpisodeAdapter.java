@@ -1,18 +1,26 @@
 package com.alex.rickandmorty.ui.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
+import com.alex.rickandmorty.CharacterDetail;
 import com.alex.rickandmorty.R;
+import com.alex.rickandmorty.ui.Models.CharacterModel;
 import com.alex.rickandmorty.ui.Models.EpisodeModel;
+import com.sackcentury.shinebuttonlib.ShineButton;
+import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.viewHolder> {
 
@@ -26,16 +34,16 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.viewHold
 
     @NonNull
     @Override
-    public com.alex.rickandmorty.ui.Adapters.EpisodeAdapter.viewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int pos) {
+    public EpisodeAdapter.viewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int pos) {
         View view = LayoutInflater.from(viewGroup.getContext()).
                 inflate(R.layout.episode_row, viewGroup, false);
         context  = viewGroup.getContext();
-        return new com.alex.rickandmorty.ui.Adapters.EpisodeAdapter.viewHolder(view);
+        return new EpisodeAdapter.viewHolder(view);
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull com.alex.rickandmorty.ui.Adapters.EpisodeAdapter.viewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull EpisodeAdapter.viewHolder holder, int position) {
         EpisodeModel model = modelList.get(position);
 
         holder.tvName.setText(model.getName());

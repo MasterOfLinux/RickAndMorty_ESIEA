@@ -22,6 +22,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.security.AccessController.getContext;
+
 public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.viewHolder> {
     private List<CharacterModel> modelList;
     private Context context;
