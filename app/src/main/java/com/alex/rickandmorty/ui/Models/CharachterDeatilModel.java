@@ -2,7 +2,6 @@ package com.alex.rickandmorty.ui.Models;
 
 public class CharachterDeatilModel {
 
-
     String name,episode;
 
     public CharachterDeatilModel(String name, String episode) {
