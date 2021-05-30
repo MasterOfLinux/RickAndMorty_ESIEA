@@ -57,7 +57,6 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.view
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toasty.success(context,  "\n" + model.getCurUrl() + "\n" + model.getI(), Toast.LENGTH_SHORT, true).show();
                 Intent i=  new Intent(context, CharacterDetail.class);
                 i.putExtra("curUrlKey",model.getCurUrl());
                 i.putExtra("curIdKey",model.getI());
@@ -93,7 +92,6 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.view
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            //  shineButton = itemView.findViewById(R.id.po_image2);
             tvName = itemView.findViewById(R.id.char_name);
             tvStatus = itemView.findViewById(R.id.char_status);
             tvSpecie = itemView.findViewById(R.id.char_specie);

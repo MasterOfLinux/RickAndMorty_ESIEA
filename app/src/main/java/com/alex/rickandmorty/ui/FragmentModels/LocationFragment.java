@@ -18,9 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.alex.rickandmorty.R;
-import com.alex.rickandmorty.ui.Adapters.EpisodeAdapter;
 import com.alex.rickandmorty.ui.Adapters.LocationAdapter;
-import com.alex.rickandmorty.ui.Models.EpisodeModel;
 import com.alex.rickandmorty.ui.Models.LocationModel;
 import com.wang.avi.AVLoadingIndicatorView;
 
@@ -45,7 +43,6 @@ public class LocationFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_location, container, false);
 
 
@@ -92,7 +89,6 @@ public class LocationFragment extends Fragment {
     }
 
     public void singlepage(int i) {
-        // final String curentUrl = baseUrl + "?page=" + i;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, baseUrl+i,
                 new Response.Listener<String>() {
                     @Override
@@ -114,7 +110,6 @@ public class LocationFragment extends Fragment {
 
 
                                 } catch (Exception ex) {
-                                    //   Toast.makeText(root.getContext(), "1" + ex.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             }
 
@@ -125,14 +120,12 @@ public class LocationFragment extends Fragment {
 
 
                         } catch (Exception ex) {
-                            //Toast.makeText(root.getContext(), "2" + ex.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                //  Toast.makeText(root.getContext(), "3" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });

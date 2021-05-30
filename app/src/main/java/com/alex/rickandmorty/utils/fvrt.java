@@ -88,18 +88,12 @@ public class fvrt extends AppCompatActivity {
 
                 listl.add(name);
 
-                //    String status = prefs.getString("status", "No name defined");
-                //     boolean ischk = prefs.getBoolean("aded",false);
-                //   if (ischk){shineButton.setChecked(true); }
 
             }
         }
 
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listl);
-        //  Spinner sp = (Spinner) findViewById(R.id.spinner1);
-        //sp.setAdapter(adapter);
-
         myLsit.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
@@ -108,7 +102,6 @@ public class fvrt extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-    //    Toasty.success(fvrt.this, "restar", Toast.LENGTH_SHORT, true).show();
         listl.clear();
         loaddata();
     }

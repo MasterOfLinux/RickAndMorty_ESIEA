@@ -1,24 +1,18 @@
 package com.alex.rickandmorty.ui.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.alex.rickandmorty.CharacterDetail;
 import com.alex.rickandmorty.R;
 import com.alex.rickandmorty.ui.Models.CharachterDeatilModel;
-import com.alex.rickandmorty.ui.Models.CharacterModel;
-import com.sackcentury.shinebuttonlib.ShineButton;
-import com.squareup.picasso.Picasso;
+
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CharacterDetailAdapter extends  RecyclerView.Adapter<CharacterDetailAdapter.viewHolder> {
@@ -64,7 +58,6 @@ public class CharacterDetailAdapter extends  RecyclerView.Adapter<CharacterDetai
         TextView tvName, tvEpisode;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            //  shineButton = itemView.findViewById(R.id.po_image2);
             tvName = itemView.findViewById(R.id.txtName);
             tvEpisode = itemView.findViewById(R.id.txtEpisode);
 

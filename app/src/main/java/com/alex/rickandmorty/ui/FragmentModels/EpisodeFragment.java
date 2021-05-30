@@ -45,7 +45,6 @@ public class EpisodeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         root =  inflater.inflate(R.layout.fragment_episode, container, false);
 
 
@@ -92,7 +91,6 @@ public class EpisodeFragment extends Fragment {
     }
 
     public void singlepage(int i) {
-       // final String curentUrl = baseUrl + "?page=" + i;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, baseUrl+i,
                 new Response.Listener<String>() {
                     @Override
@@ -114,7 +112,6 @@ public class EpisodeFragment extends Fragment {
 
 
                                 } catch (Exception ex) {
-                                    //   Toast.makeText(root.getContext(), "1" + ex.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             }
 
@@ -125,14 +122,12 @@ public class EpisodeFragment extends Fragment {
 
 
                         } catch (Exception ex) {
-                            //Toast.makeText(root.getContext(), "2" + ex.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                //  Toast.makeText(root.getContext(), "3" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });

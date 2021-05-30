@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.alex.rickandmorty.R;
-import com.alex.rickandmorty.ui.Models.EpisodeModel;
 import com.alex.rickandmorty.ui.Models.LocationModel;
 
 import java.util.List;
@@ -43,10 +42,6 @@ public class LocationAdapter  extends RecyclerView.Adapter<LocationAdapter.viewH
         holder.tvType.setText(model.getType());
         holder.tvDim.setText(model.getDimension());
 
-
-        // Picasso.get().load(model.getImage()).into(holder.char_img);
-
-
     }
 
     @Override
@@ -64,7 +59,6 @@ public class LocationAdapter  extends RecyclerView.Adapter<LocationAdapter.viewH
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            //  shineButton = itemView.findViewById(R.id.po_image2);
             tvName = itemView.findViewById(R.id.loc_name);
             tvType = itemView.findViewById(R.id.loc_type);
             tvDim = itemView.findViewById(R.id.loc_dim);

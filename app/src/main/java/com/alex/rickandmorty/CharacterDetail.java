@@ -1,6 +1,6 @@
 package com.alex.rickandmorty;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -57,7 +57,6 @@ public class CharacterDetail extends AppCompatActivity {
     ShineButton shineButton;
     String baseUrl;
     CollapsingToolbarLayout toolBarLayout;
-    //  String baseUrl = "https://rickandmortyapi.com/api/character?page=";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,9 +95,7 @@ public class CharacterDetail extends AppCompatActivity {
 
                 Bitmap bitmap = getBitmapFromView(img);
                 try {
-                    //File file = new File(this.getExternalCacheDir(),File.separator+ "logicchip.png");
                     File file = new File(getExternalCacheDir(), "logicchip.png");
-                    // File file = new File(this.getCacheDir(),File.separator+ "logicchip.png");
                     FileOutputStream fOut = new FileOutputStream(file);
                     bitmap.compress(Bitmap.CompressFormat.PNG, 100, fOut);
                     fOut.flush();
@@ -107,13 +104,11 @@ public class CharacterDetail extends AppCompatActivity {
                     final Intent intent = new Intent(android.content.Intent.ACTION_SEND);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     Uri photoURI = FileProvider.getUriForFile(CharacterDetail.this, BuildConfig.APPLICATION_ID + ".provider", file);
-                    // intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file.getC));
                     intent.putExtra(Intent.EXTRA_STREAM, photoURI);
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                     intent.setType("image/png");
                     intent.setType("text/plain\"");
                     intent.putExtra(Intent.EXTRA_TEXT, name.getText().toString() + "\n" + status.getText().toString() + "\n" + species.getText().toString());
-                    //startActivity(Intent.createChooser(intent, "Share image via"));
                     startActivityForResult(Intent.createChooser(intent, "Share image via"), 2);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -127,7 +122,6 @@ public class CharacterDetail extends AppCompatActivity {
 
 
         int CURRENTID = Integer.parseInt(id);
-       // Toast.makeText(CharacterDetail.this, "2 " + baseUrl, Toast.LENGTH_SHORT).show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, baseUrl, new Response.Listener<String>() {
             @Override
@@ -148,7 +142,6 @@ public class CharacterDetail extends AppCompatActivity {
                     for (int i = 0; i < jsonArray.length(); i++) {
 
                         String epLink = jsonArray.getString(i);
-                        //  Toast.makeText(CharacterDetail.this, "L " + ep , Toast.LENGTH_SHORT).show();
                         loadEpisodes(epLink);
                     }
                     checkSharedPref();
@@ -163,8 +156,6 @@ public class CharacterDetail extends AppCompatActivity {
                     Picasso.get().load(imgg).into(img);
                     avi.hide();
 
-
-                    //       loadEpisodes(baseUrl, CURRENTID);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -189,7 +180,6 @@ public class CharacterDetail extends AppCompatActivity {
                     editor.putString("id", id);
                     editor.putBoolean("aded", true);
                     editor.commit();
-                  //  Toast.makeText(CharacterDetail.this, "chk", Toast.LENGTH_SHORT).show();
                 }
                 else if (!shineButton.isChecked()){
                     String filePath = getApplicationContext().getFilesDir().getParent()+"/shared_prefs/"+MY_PREFS+".xml";
@@ -210,8 +200,6 @@ public class CharacterDetail extends AppCompatActivity {
         String filePath = getApplicationContext().getFilesDir().getParent()+"/shared_prefs/"+MY_PREFS+".xml";
         File deletePrefFile = new File(filePath );
 
-    //    Toast.makeText(CharacterDetail.this, "c "+MY_PREFS, Toast.LENGTH_SHORT).show();
-      //  boolean ischk = prefs.getBoolean("aded", false);
         if (deletePrefFile.exists()) {
             shineButton.setChecked(true);
         } else if (!deletePrefFile.exists()){
@@ -261,7 +249,6 @@ public class CharacterDetail extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
-       // startActivity(new Intent(CharacterDetail.this  , fvrt.class));
         overridePendingTransition(R.anim.fadein,R.anim.fadeout);
 
     }

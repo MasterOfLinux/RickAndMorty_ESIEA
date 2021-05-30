@@ -61,13 +61,7 @@ public class CharacterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //  characterModel =  new ViewModelProvider(this).get(CharacterFragment.class);
-
-
         root = inflater.inflate(R.layout.fragment_character, container, false);
-
-        //  gg = root.findViewById(R.id.gg);
-        //  gg.setText("sadfddddddddddddddddddd");
 
         avi = root.findViewById(R.id.avi);
         query = root.findViewById(R.id.edQuery);
@@ -80,9 +74,7 @@ public class CharacterFragment extends Fragment {
 
         getApiCall();
 
-        /////
-        //////
-        ////////////SPINNENERRRRRRRRRRRRRRR
+
         clearF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,12 +85,7 @@ public class CharacterFragment extends Fragment {
                 Toasty.success(root.getContext(), "All filter cleared", Toast.LENGTH_SHORT, true).show();
             }
         });
-      /*  ArrayAdapter<String> adapter = new ArrayAdapter<String>(root.getContext(),
-                android.R.layout.simple_spinner_item, paths);
 
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setPrompt("");*/
 
         spinner.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -254,7 +241,6 @@ public class CharacterFragment extends Fragment {
 
 
                                 } catch (Exception ex) {
-                                    //   Toast.makeText(root.getContext(), "1" + ex.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             }
 
@@ -265,14 +251,12 @@ public class CharacterFragment extends Fragment {
 
 
                         } catch (Exception ex) {
-                            //Toast.makeText(root.getContext(), "2" + ex.getMessage(), Toast.LENGTH_SHORT).show();
 
                         }
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                //  Toast.makeText(root.getContext(), "3" + error.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });

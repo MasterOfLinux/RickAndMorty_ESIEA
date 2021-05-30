@@ -1,25 +1,18 @@
 package com.alex.rickandmorty.ui.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.alex.rickandmorty.CharacterDetail;
 import com.alex.rickandmorty.R;
-import com.alex.rickandmorty.ui.Models.CharacterModel;
 import com.alex.rickandmorty.ui.Models.EpisodeModel;
-import com.sackcentury.shinebuttonlib.ShineButton;
-import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.viewHolder> {
@@ -50,10 +43,6 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.viewHold
         holder.tvAirDate.setText(model.getAirDate());
         holder.tvEpisode.setText(model.getEpisdoe());
 
-
-       // Picasso.get().load(model.getImage()).into(holder.char_img);
-
-
 }
 
     @Override
@@ -71,7 +60,6 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.viewHold
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            //  shineButton = itemView.findViewById(R.id.po_image2);
             tvName = itemView.findViewById(R.id.ep_name);
             tvAirDate = itemView.findViewById(R.id.ep_date);
             tvEpisode = itemView.findViewById(R.id.ep_episode);
